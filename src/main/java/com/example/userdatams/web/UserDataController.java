@@ -1,11 +1,9 @@
 package com.example.userdatams.web;
 
 import com.example.userdatams.model.UserDataDto;
-import com.example.userdatams.repository.model.UserDataEntity;
 import com.example.userdatams.service.UserDataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,6 +37,8 @@ public class UserDataController {
 
     @GetMapping("/get-data/{id}")
     public ResponseEntity<UserDataDto> seeUserData(@PathVariable Long id){
+        log.info("fetching user data id: {}", id);
+        log.warn("warn");
         return ResponseEntity.ok(userDataService.getUserData(id));
     }
 
