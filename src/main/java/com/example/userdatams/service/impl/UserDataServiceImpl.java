@@ -54,6 +54,12 @@ public class UserDataServiceImpl implements UserDataService {
         return userDataEntityMapper.entityToDto(userData);
     }
 
+    @Override
+    public UserDataDto getUser(Long userId){
+        UserDataEntity user = userDataRepository.findByUserId(userId).orElseThrow( UserDataNotFoundException::new );
+        return userDataEntityMapper.entityToDto(user);
+    }
+
 
 
 

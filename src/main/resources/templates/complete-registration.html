@@ -1,0 +1,43 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete registration</title>
+    <script th:inline="javascript">
+        if(!localStorage.getItem("userId") || !localStorage.getItem("userId") !== null){
+            const activeUserId = [[${userId}]];
+            localStorage.setItem("userId", activeUserId);
+        }
+    </script>
+</head>
+<body>
+<h2>Complete registration page</h2>
+
+<div>
+  <form th:action="@{/save-user-data}" method="post"
+        th:object="${userDataDto}">
+      <div>
+          <input type="text" class="input" th:value="${userId}" th:field="*{userId}" />
+      </div>
+      <div>
+          <input type="text" class="input" th:field="*{firstName}" placeholder="Enter your first name" />
+      </div>
+
+      <div>
+          <input type="text" class="input" th:field="*{lastName}"  placeholder="Enter your last name"/> <br><br>
+      </div>
+      <div>
+          <input type="text" class="input" name="role"  placeholder="Enter your role"/> <br><br>
+      </div>
+      <div>
+          <button class="login-button" type="submit">Save my login information</button>
+      </div>
+
+
+  </form>
+</div>
+
+</body>
+</html>

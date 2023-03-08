@@ -9,9 +9,11 @@ import java.util.List;
 
 @Service
 public interface UserDataService {
-    public UserDataDto getUserData(Long id);
-    public List<UserDataDto> getAllUsersData();
+    UserDataDto getUserData(Long id);
+    List<UserDataDto> getAllUsersData();
 //    public void saveUserData(Long userId, String firstName, String lastName, LocalDateTime registrationDate);
-    public UserDataDto saveUserData(UserDataDto userData);
-    public UserDataDto updateUserData(UserDataDto userDataDto);
+    UserDataDto saveUserData(UserDataDto userData);
+    UserDataDto updateUserData(UserDataDto userDataDto);
+
+    UserDataDto getUser(Long userId);
 }

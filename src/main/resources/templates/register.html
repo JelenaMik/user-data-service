@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+<!--    <meta name=viewport" content="width=device-width"; initial-scale="1.0">-->
+</head>
+<body>
+
+<div>
+    <h3>Please enter your information</h3>
+
+
+    <form th:action="@{/register}" method="post"
+          th:object = "${userDto}">
+
+        <div>
+            <input type="email" class="input" th:field="*{email}" placeholder="Enter your email" />
+        </div>
+
+        <div>
+            <input type="password" class="input" th:field="*{password}"  placeholder="Password"/> <br><br>
+        </div>
+        <div>
+            <button class="login-button" type="submit">Save my login information</button>
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+</html>

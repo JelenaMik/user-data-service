@@ -1,0 +1,56 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update your profile information</title>
+    <script th:inline="javascript">
+        getActiveUserId = function () {
+            const getActiveUserId =  localStorage.getItem("userId");
+            return getActiveUserId;
+        }
+        if(getActiveUserId() == null){
+            window.location.href = "login"
+        }
+        getActiveUSerName = function (){
+            const name = localStorage.getItem("userName");
+            if (name==null) return "User";
+            else return name;
+        }
+    </script>
+
+    <link href="/styles/stylesheet.css" rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="index-body">
+
+<div class="page-header">
+    <nav class="logout-ion">
+        <a class="link" href="logout">
+            <ion-icon name="log-out-outline"></ion-icon>
+        </a>
+        <p>Hello, <span id="name"><script>document.getElementById("name").innerHTML = getActiveUSerName();</script></span> !</p>
+    </nav>
+    <div class="navigation-bar">
+        <a class="nav-link" href="update-profile">Update profile information</a>
+        <a class="nav-link" href="change-login-info">Change login information</a>
+        <a class="nav-link" >My appointments</a>
+        <a class="nav-link" >Messages</a>
+    </div>
+
+</div>
+
+<div class="pageContent centered-content">
+
+<h2 >Profile updating page</h2>
+<h2 >My id is: <span id = "demo"><script > const id = getActiveUserId(); document.getElementById("demo").innerHTML = id;</script> </span> </h2>
+
+</div>
+
+<div class="footer">
+    <p>Personal project</p>
+</div>
+</body>
+</html>
