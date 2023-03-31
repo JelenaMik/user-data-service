@@ -3,6 +3,7 @@ package com.example.userdatams.service.impl;
 import com.example.userdatams.mapper.UserDataEntityMapper;
 import com.example.userdatams.model.UserDataDto;
 import com.example.userdatams.handlers.exceptions.UserDataNotFoundException;
+import com.example.userdatams.model.UserDto;
 import com.example.userdatams.repository.UserDataRepository;
 import com.example.userdatams.repository.model.UserDataEntity;
 import com.example.userdatams.service.UserDataService;
@@ -11,7 +12,9 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Log4j2
@@ -29,10 +32,9 @@ public class UserDataServiceImpl implements UserDataService {
 
     @Override
     public List<UserDataDto> getAllUsersData(){
-        List<UserDataDto> userDataDtoList = userDataRepository.findAll().stream()
-                .map(userDataEntity -> userDataEntityMapper.entityToDto(userDataEntity))
-                .collect(Collectors.toList());
-        return userDataDtoList;
+        return userDataRepository.findAll().stream()
+                .map(userDataEntityMapper::entityToDto)
+                .toList();
     }
 
     @Override
@@ -58,6 +60,24 @@ public class UserDataServiceImpl implements UserDataService {
     public UserDataDto getUser(Long userId){
         UserDataEntity user = userDataRepository.findByUserId(userId).orElseThrow( UserDataNotFoundException::new );
         return userDataEntityMapper.entityToDto(user);
+    }
+
+    @Override
+    public List<UserDataDto> findUserDataByFirstName(String firstName){
+        return userDataRepository.findFirst10ByFirstNameContaining(firstName)
+                .stream()
+                .map(userDataEntityMapper::entityToDto)
+                .toList();
+    }
+
+    @Override
+    public List<UserDataDto> findUserDataForProviderList(List<UserDto> providerList){
+        return providerList.stream()
+                .map(provider -> userDataRepository.findByUserId(provider.getId()).get())
+                .toList().stream()
+                .map(userDataEntityMapper::entityToDto)
+                .toList();
+
     }
 
 

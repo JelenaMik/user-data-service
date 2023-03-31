@@ -1,6 +1,8 @@
 package com.example.userdatams.web;
 
 import com.example.userdatams.model.UserDataDto;
+import com.example.userdatams.model.UserDto;
+import com.example.userdatams.repository.model.UserDataEntity;
 import com.example.userdatams.service.UserDataService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -68,6 +70,26 @@ public class UserDataController {
     @PutMapping("/update-user-data")
     public ResponseEntity<UserDataDto> updateUserData(@RequestBody UserDataDto userDataDto){
         return ResponseEntity.ok(userDataService.updateUserData(userDataDto));
+    }
+    @Operation(description = "Search users by first name")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "The request is successful"),
+            @ApiResponse(responseCode = "404", description = "The server cannot find the requested resource"),
+            @ApiResponse(responseCode = "500", description = "Server error")
+    })
+    @GetMapping("/search-users")
+    public ResponseEntity<List<UserDataDto>> searchByFirstName(String firstName){
+        return ResponseEntity.ok(userDataService.findUserDataByFirstName(firstName));
+    }
+    @Operation(description = "Fetches providers user data")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "The request is successful"),
+            @ApiResponse(responseCode = "404", description = "The server cannot find the requested resource"),
+            @ApiResponse(responseCode = "500", description = "Server error")
+    })
+    @GetMapping("/provider-data")
+    public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestBody List<UserDto> providerList){
+        return ResponseEntity.ok(userDataService.findUserDataForProviderList(providerList));
     }
 
 

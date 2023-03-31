@@ -1,6 +1,7 @@
 package com.example.userdatams.service;
 
 import com.example.userdatams.model.UserDataDto;
+import com.example.userdatams.model.UserDto;
 import com.example.userdatams.repository.model.UserDataEntity;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +17,8 @@ public interface UserDataService {
     UserDataDto updateUserData(UserDataDto userDataDto);
 
     UserDataDto getUser(Long userId);
+
+    List<UserDataDto> findUserDataByFirstName(String firstName);
+
+    List<UserDataDto> findUserDataForProviderList(List<UserDto> providerList);
 }

@@ -11,4 +11,6 @@ public interface UserDataRepository extends JpaRepository<UserDataEntity, Long> 
 
     List<UserDataEntity> findAll();
     Optional<UserDataEntity> findByUserId(Long userId);
+
+    List<UserDataEntity> findFirst10ByFirstNameContaining(String firstName);
 }
