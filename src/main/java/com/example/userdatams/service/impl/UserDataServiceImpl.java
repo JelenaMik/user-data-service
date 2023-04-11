@@ -2,7 +2,7 @@ package com.example.userdatams.service.impl;
 
 import com.example.userdatams.mapper.UserDataEntityMapper;
 import com.example.userdatams.model.UserDataDto;
-import com.example.userdatams.handlers.exceptions.UserDataNotFoundException;
+import com.example.userdatams.exceptions.UserDataNotFoundException;
 import com.example.userdatams.model.UserDto;
 import com.example.userdatams.repository.UserDataRepository;
 import com.example.userdatams.repository.model.UserDataEntity;
@@ -10,12 +10,9 @@ import com.example.userdatams.service.UserDataService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Log4j2
 @RequiredArgsConstructor
@@ -38,8 +35,8 @@ public class UserDataServiceImpl implements UserDataService {
     }
 
     @Override
+    @Validated
     public UserDataDto saveUserData(UserDataDto userData){
-    userData.setRegistrationDate(LocalDateTime.now());
     log.info("userDataDto: {}", userData);
 
         return userDataEntityMapper.entityToDto(

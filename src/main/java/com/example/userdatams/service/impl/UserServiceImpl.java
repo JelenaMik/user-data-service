@@ -5,7 +5,7 @@ import com.example.userdatams.mapper.UserEntityMapper;
 import com.example.userdatams.model.UserDto;
 import com.example.userdatams.repository.UserRepository;
 import com.example.userdatams.repository.model.UserEntity;
-import com.example.userdatams.handlers.exceptions.UserDataNotFoundException;
+import com.example.userdatams.exceptions.UserDataNotFoundException;
 import com.example.userdatams.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
