@@ -1,6 +1,5 @@
 package com.example.userdatams.service;
 
-import com.example.userdatams.enums.Role;
 import com.example.userdatams.model.UserDto;
 import org.springframework.stereotype.Service;
 

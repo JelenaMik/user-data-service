@@ -68,9 +68,9 @@ public class UserDataServiceImpl implements UserDataService {
     }
 
     @Override
-    public List<UserDataDto> findUserDataForProviderList(List<UserDto> providerList){
+    public List<UserDataDto> findUserDataForProviderList(List<Long> providerList){
         return providerList.stream()
-                .map(provider -> userDataRepository.findByUserId(provider.getId()).get())
+                .map(providerId -> userDataRepository.findByUserId(providerId).get())
                 .toList().stream()
                 .map(userDataEntityMapper::entityToDto)
                 .toList();

@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -89,7 +90,7 @@ public class UserDataController {
             @ApiResponse(responseCode = "500", description = "Server error")
     })
     @GetMapping("/provider-data")
-    public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestBody List<UserDto> providerList){
+    public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestParam List<Long> providerList){
         return new ResponseEntity<>(userDataService.findUserDataForProviderList(providerList), HttpStatus.OK);
     }
 

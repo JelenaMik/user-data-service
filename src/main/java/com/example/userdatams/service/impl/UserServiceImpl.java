@@ -21,8 +21,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Long saveUser(UserDto userDto) {
         if(userDto.getRole()==null) userDto.setRole(Role.USER);
-        Long userId = userRepository.save(userEntityMapper.dtoToEntity(userDto)).getId();
-        return userId;
+        return userRepository.save(userEntityMapper.dtoToEntity(userDto)).getId();
     }
 
     @Override
