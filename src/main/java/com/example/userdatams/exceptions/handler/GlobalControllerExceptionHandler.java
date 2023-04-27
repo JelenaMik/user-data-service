@@ -1,6 +1,8 @@
 package com.example.userdatams.exceptions.handler;
 
+import com.example.userdatams.exceptions.FavoriteProviderAlreadyExistsException;
 import com.example.userdatams.exceptions.UserDataNotFoundException;
+import com.example.userdatams.repository.model.FavoriteProvider;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.ConstraintViolationException;
@@ -47,6 +49,20 @@ public class GlobalControllerExceptionHandler {
                 .timestamp(LocalDate.now())
                 .status(HttpStatus.BAD_REQUEST)
                 .message("User data was not found")
+                .path(request.getRequestURI())
+                .build();
+
+        return new ResponseEntity<>(errorModel, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(FavoriteProviderAlreadyExistsException.class)
+    ResponseEntity handleBindErrors(FavoriteProviderAlreadyExistsException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.sendError(HttpStatus.BAD_REQUEST.value(),"It is already your favorite provider");
+
+        ErrorModel errorModel = ErrorModel.builder()
+                .timestamp(LocalDate.now())
+                .status(HttpStatus.BAD_REQUEST)
+                .message("It is already your favorite provider")
                 .path(request.getRequestURI())
                 .build();
 

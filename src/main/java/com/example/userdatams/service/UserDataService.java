@@ -1,7 +1,7 @@
 package com.example.userdatams.service;
 
 import com.example.userdatams.model.UserDataDto;
-import com.example.userdatams.model.UserDto;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

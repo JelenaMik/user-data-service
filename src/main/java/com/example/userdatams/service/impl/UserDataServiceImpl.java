@@ -1,9 +1,8 @@
 package com.example.userdatams.service.impl;
 
+import com.example.userdatams.exceptions.UserDataNotFoundException;
 import com.example.userdatams.mapper.UserDataEntityMapper;
 import com.example.userdatams.model.UserDataDto;
-import com.example.userdatams.exceptions.UserDataNotFoundException;
-import com.example.userdatams.model.UserDto;
 import com.example.userdatams.repository.UserDataRepository;
 import com.example.userdatams.repository.model.UserDataEntity;
 import com.example.userdatams.service.UserDataService;
@@ -74,11 +73,7 @@ public class UserDataServiceImpl implements UserDataService {
                 .toList().stream()
                 .map(userDataEntityMapper::entityToDto)
                 .toList();
-
     }
-
-
-
 
 
 }

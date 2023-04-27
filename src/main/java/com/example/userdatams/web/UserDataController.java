@@ -1,7 +1,7 @@
 package com.example.userdatams.web;
 
 import com.example.userdatams.model.UserDataDto;
-import com.example.userdatams.model.UserDto;
+
 import com.example.userdatams.service.UserDataService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -93,6 +93,5 @@ public class UserDataController {
     public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestParam List<Long> providerList){
         return new ResponseEntity<>(userDataService.findUserDataForProviderList(providerList), HttpStatus.OK);
     }
-
 
 }
