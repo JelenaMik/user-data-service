@@ -166,7 +166,7 @@ public class UserDataControllerPutPostSpringBootTests extends ObjectsForUserData
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .content(asJsonString(userDataDtoUpdated)))
                 .andDo(print())
-                .andExpect(status().isBadRequest())
+                .andExpect(status().isNotFound())
                 .andExpect(res -> assertTrue(res.getResolvedException() instanceof UserDataNotFoundException))
                 .andReturn();
     }

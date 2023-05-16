@@ -1,0 +1,291 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.3)
+
+2023-05-16T11:16:02.829+03:00  INFO 22036 --- [  restartedMain] c.e.userdatams.UserDataMsApplication     : Starting UserDataMsApplication using Java 18.0.2 with PID 22036 (C:\Users\jelena.mikelsone\Documents\appointments\userDataMs\target\classes started by jelena.mikelsone in C:\Users\jelena.mikelsone\Documents\appointments\userDataMs)
+2023-05-16T11:16:02.834+03:00  INFO 22036 --- [  restartedMain] c.e.userdatams.UserDataMsApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-05-16T11:16:02.902+03:00  INFO 22036 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-05-16T11:16:02.903+03:00  INFO 22036 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-05-16T11:16:04.992+03:00  INFO 22036 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T11:16:05.101+03:00  INFO 22036 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2023-05-16T11:16:05.867+03:00  INFO 22036 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8102 (http)
+2023-05-16T11:16:05.882+03:00  INFO 22036 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-16T11:16:05.882+03:00  INFO 22036 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-05-16T11:16:06.042+03:00  INFO 22036 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-16T11:16:06.042+03:00  INFO 22036 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3138 ms
+2023-05-16T11:16:06.277+03:00  INFO 22036 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T11:16:06.356+03:00  INFO 22036 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T11:16:06.711+03:00  INFO 22036 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-16T11:16:07.035+03:00  INFO 22036 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13f24dd8
+2023-05-16T11:16:07.038+03:00  INFO 22036 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-16T11:16:07.104+03:00  INFO 22036 --- [  restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-16T11:16:08.069+03:00  INFO 22036 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T11:16:08.081+03:00  INFO 22036 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T11:16:08.641+03:00  WARN 22036 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T11:16:08.733+03:00  INFO 22036 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2023-05-16T11:16:10.146+03:00  INFO 22036 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-05-16T11:16:10.202+03:00  INFO 22036 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2afdeca3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cf7929c, org.springframework.security.web.context.SecurityContextHolderFilter@3cff7ef1, org.springframework.security.web.header.HeaderWriterFilter@45dde58b, org.springframework.security.web.authentication.logout.LogoutFilter@46600bed, com.example.userdatams.config.JwtAuthenticationFilter@2207ec8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76d76f7b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46e9a29c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@11809be1, org.springframework.security.web.session.SessionManagementFilter@2d3aee6, org.springframework.security.web.access.ExceptionTranslationFilter@7328a2de, org.springframework.security.web.access.intercept.AuthorizationFilter@76b61f47]
+2023-05-16T11:16:10.461+03:00  WARN 22036 --- [  restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2023-05-16T11:16:10.741+03:00  INFO 22036 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-05-16T11:16:10.830+03:00  INFO 22036 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8102 (http) with context path ''
+2023-05-16T11:16:10.845+03:00  INFO 22036 --- [  restartedMain] c.e.userdatams.UserDataMsApplication     : Started UserDataMsApplication in 8.564 seconds (process running for 9.972)
+2023-05-16T11:16:11.232+03:00  INFO 22036 --- [)-192.168.8.157] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-16T11:16:11.232+03:00  INFO 22036 --- [)-192.168.8.157] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-05-16T11:16:11.234+03:00  INFO 22036 --- [)-192.168.8.157] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: update user_data set first_name=?, last_name=?, registration_date=?, user_id=? where id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.first_name like ? escape '\\' limit ?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+2023-05-16T14:16:40.471+03:00  WARN 22036 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h30s141ms261탎).
+2023-05-16T14:23:01.625+03:00  WARN 22036 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s472ms745탎300ns).
+2023-05-16T16:21:27.750+03:00  WARN 22036 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m24s938ms272탎400ns).
+2023-05-16T16:36:43.198+03:00  WARN 22036 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m45s302ms482탎800ns).
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+Hibernate: select u1_0.id,u1_0.email,u1_0.password,u1_0.role from users u1_0 where u1_0.email=?
+Hibernate: select u1_0.id,u1_0.first_name,u1_0.last_name,u1_0.registration_date,u1_0.user_id from user_data u1_0 where u1_0.user_id=?
+2023-05-16T17:46:02.545+03:00  INFO 22036 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T17:46:02.555+03:00  INFO 22036 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-16T17:46:02.563+03:00  INFO 22036 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

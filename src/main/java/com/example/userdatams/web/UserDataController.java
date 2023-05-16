@@ -6,6 +6,7 @@ import com.example.userdatams.service.UserDataService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -59,7 +60,8 @@ public class UserDataController {
     })
     @GetMapping("/get-data/{id}")
     public ResponseEntity<UserDataDto> seeUserData(@PathVariable Long id){
-        log.info("fetching user data id: {}", id);
+//        log.info("request headers: {}", request.getHeaderNames().toString());
+//        log.info("fetching user data id: {}", id);
         return new ResponseEntity<>(userDataService.getUserData(id), HttpStatus.OK);
     }
 
@@ -90,7 +92,9 @@ public class UserDataController {
             @ApiResponse(responseCode = "500", description = "Server error")
     })
     @GetMapping("/provider-data")
-    public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestParam List<Long> providerList){
+    public ResponseEntity<List<UserDataDto>> getProvidersData(@RequestBody List<Long> providerList, HttpServletRequest request){
+        log.info("see providerData");
+        log.info("Headers: {}", request.getHeaderNames().toString());
         return new ResponseEntity<>(userDataService.findUserDataForProviderList(providerList), HttpStatus.OK);
     }
 

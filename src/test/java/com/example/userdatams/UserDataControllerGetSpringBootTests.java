@@ -96,7 +96,7 @@ public class UserDataControllerGetSpringBootTests extends ObjectsForUserDataCont
                                 .accept(MediaType.APPLICATION_JSON)
                                 .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isBadRequest())
+                .andExpect(status().isNotFound())
                 .andExpect(res -> assertTrue(res.getResolvedException() instanceof UserDataNotFoundException))
                 .andReturn();
     }
@@ -147,7 +147,7 @@ public class UserDataControllerGetSpringBootTests extends ObjectsForUserDataCont
                         MockMvcRequestBuilders.get("/api/v1/userdata/provider-data")
                                 .accept(MediaType.APPLICATION_JSON)
                                 .contentType(MediaType.APPLICATION_JSON)
-                                .content(listAsJsonString(List.of(user1, user2, user3))))
+                                .content(listAsJsonString(List.of(1L, 2L, 3L))))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$", hasSize(3)))
@@ -169,7 +169,7 @@ public class UserDataControllerGetSpringBootTests extends ObjectsForUserDataCont
                 .andReturn();
     }
 
-    public static String listAsJsonString(List<UserDto> providerList) {
+    public static String listAsJsonString(List<Long> providerList) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             return objectMapper.writeValueAsString(providerList);

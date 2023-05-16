@@ -43,11 +43,11 @@ public class GlobalControllerExceptionHandler {
 
     @ExceptionHandler(UserDataNotFoundException.class)
     ResponseEntity handleBindErrors(UserDataNotFoundException exception, HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.sendError(HttpStatus.BAD_REQUEST.value(),"User data was not found");
+        response.sendError(HttpStatus.NOT_FOUND.value(),"User data was not found");
 
         ErrorModel errorModel = ErrorModel.builder()
                 .timestamp(LocalDate.now())
-                .status(HttpStatus.BAD_REQUEST)
+                .status(HttpStatus.NOT_FOUND)
                 .message("User data was not found")
                 .path(request.getRequestURI())
                 .build();

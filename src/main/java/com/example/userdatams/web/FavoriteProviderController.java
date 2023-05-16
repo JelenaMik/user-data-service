@@ -2,6 +2,7 @@ package com.example.userdatams.web;
 
 import com.example.userdatams.service.FavoriteProviderService;
 import com.example.userdatams.service.UserDataService;
+import com.mysql.cj.x.protobuf.Mysqlx;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
@@ -37,8 +38,8 @@ public class FavoriteProviderController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/providers-list/{clientId}")
-    public ResponseEntity<List> getFavoriteProvidersList(@PathVariable Long clientId){
+    @GetMapping("/providers/{clientId}")
+    public ResponseEntity<List> getListOfFavoriteProvidersData(@PathVariable Long clientId){
         List<Long> providersIds = service.getClientsFavoriteProvidersList(clientId);
         return new ResponseEntity<>(userDataService.findUserDataForProviderList(providersIds), HttpStatus.OK);
     }
